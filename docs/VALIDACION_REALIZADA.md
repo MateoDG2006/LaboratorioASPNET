@@ -18,12 +18,13 @@ Fecha: 23 de noviembre de 2026.
 | Reversión de datos de prueba | Se revirtieron los cambios de la prueba, conservando los cinco registros del seed. |
 | Scripts PowerShell | Sintaxis válida. |
 | Instalador de carpeta | Copió el proyecto a un directorio temporal y rechazó una segunda copia sobre el mismo destino. |
+| Ejecución web local | IIS Express respondió correctamente en el listado y en las pantallas de alta, detalle y confirmación de anulación. Se guardaron capturas reales en `docs/images/`. |
 
 ## Alcance y comprobaciones pendientes
 
-La validación SQL se realizó ejecutando los scripts y las comprobaciones dentro del proceso de una instancia temporal. Las conexiones entre procesos fueron bloqueadas por el entorno, por lo que no se pudo ejecutar aquí el modo de integración del conector ni completar una sesión de navegador con IIS Express. La compilación y precompilación no sustituyen esas pruebas de extremo a extremo.
+La validación SQL se realizó ejecutando los scripts y las comprobaciones dentro del proceso de una instancia temporal. Esa sesión no pudo ejecutar el modo de integración del conector. Posteriormente se abrió la aplicación local con IIS Express y se comprobaron visualmente el listado y las páginas de alta, detalle y confirmación de anulación. Las capturas no prueban por sí solas las operaciones de escritura en el navegador.
 
-Queda ejecutar la aplicación en Visual Studio con la instancia MySQL y las credenciales locales del estudiante, revisar los casos de `PRUEBAS.md` y capturar las evidencias de pantalla. El paquete no contiene credenciales reales.
+Queda revisar los casos de escritura y conflicto de `PRUEBAS.md` en la instalación de destino. El paquete no contiene credenciales reales.
 
 ## Corrección de conexión y caracteres
 
