@@ -1,0 +1,11 @@
+# Archivos generados y credenciales locales
+.vs/
+**/bin/
+**/obj/
+packages/
+*.user
+*.suo
+*.log
+Diseno/App_Data/Conexion.local.config
+TestResults/
+Respaldos/

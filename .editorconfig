@@ -1,0 +1,4 @@
+root = true
+
+[*.{cs,aspx,master,Master,css,js,config}]
+charset = utf-8-bom

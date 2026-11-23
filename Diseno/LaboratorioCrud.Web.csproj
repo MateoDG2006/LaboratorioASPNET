@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration><Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
+    <ProjectGuid>{FC15859F-3E6B-46EE-BC70-8DC4A17A1113}</ProjectGuid><OutputType>Library</OutputType><RootNamespace>LaboratorioCrud.Web</RootNamespace><AssemblyName>LaboratorioCrud.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion><LangVersion>7.3</LangVersion><RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects><GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType><ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><UseIISExpress>true</UseIISExpress><IISExpressSSLPort>44381</IISExpressSSLPort><Use64BitIISExpress>true</Use64BitIISExpress><VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'"><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>bin\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants></PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'"><DebugType>pdbonly</DebugType><Optimize>true</Optimize><OutputPath>bin\</OutputPath><DefineConstants>TRACE</DefineConstants></PropertyGroup>
+  <ItemGroup><Reference Include="System" /><Reference Include="System.Core" /><Reference Include="System.Data" /><Reference Include="System.Xml" /><Reference Include="System.Configuration" /><Reference Include="System.Web" /><Reference Include="System.Web.Extensions" /><Reference Include="System.Drawing" /></ItemGroup>
+  <ItemGroup><Compile Include="**\*.cs" Exclude="bin\**;obj\**" /><Content Include="**\*.aspx;**\*.master;**\*.config;**\*.css;**\*.js;**\*.svg;**\*.html" Exclude="bin\**;obj\**" /><ProjectReference Include="..\Logica\LaboratorioCrud.Logica.csproj"><Project>{68B4D6DA-97B2-472B-BB23-6B8B7EEA954E}</Project><Name>LaboratorioCrud.Logica</Name></ProjectReference></ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets')" />
+    <Target Name="PrepararConfiguracionLocal" BeforeTargets="PrepareForBuild"><Copy SourceFiles="App_Data\Conexion.ejemplo.config" DestinationFiles="App_Data\Conexion.local.config" Condition="!Exists('App_Data\Conexion.local.config')" /></Target>
+    <ProjectExtensions><VisualStudio><FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}"><WebProjectProperties><UseIIS>True</UseIIS><AutoAssignPort>True</AutoAssignPort><DevelopmentServerPort>51840</DevelopmentServerPort><DevelopmentServerVPath>/</DevelopmentServerVPath><IISUrl>http://localhost:51840/</IISUrl><NTLMAuthentication>False</NTLMAuthentication><UseCustomServer>False</UseCustomServer><SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile></WebProjectProperties></FlavorProperties></VisualStudio></ProjectExtensions>
+</Project>

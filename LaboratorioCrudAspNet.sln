@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboratorioCrud.Web", "Diseno\LaboratorioCrud.Web.csproj", "{FC15859F-3E6B-46EE-BC70-8DC4A17A1113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboratorioCrud.Logica", "Logica\LaboratorioCrud.Logica.csproj", "{68B4D6DA-97B2-472B-BB23-6B8B7EEA954E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboratorioCrud.Pruebas", "Pruebas\LaboratorioCrud.Pruebas.csproj", "{56196DF6-446A-4364-936E-08CC812154D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68B4D6DA-97B2-472B-BB23-6B8B7EEA954E}.Debug|Any CPU.ActiveCfg = Debug|AnyCPU
+		{68B4D6DA-97B2-472B-BB23-6B8B7EEA954E}.Debug|Any CPU.Build.0 = Debug|AnyCPU
+		{68B4D6DA-97B2-472B-BB23-6B8B7EEA954E}.Release|Any CPU.ActiveCfg = Release|AnyCPU
+		{68B4D6DA-97B2-472B-BB23-6B8B7EEA954E}.Release|Any CPU.Build.0 = Release|AnyCPU
+		{FC15859F-3E6B-46EE-BC70-8DC4A17A1113}.Debug|Any CPU.ActiveCfg = Debug|AnyCPU
+		{FC15859F-3E6B-46EE-BC70-8DC4A17A1113}.Debug|Any CPU.Build.0 = Debug|AnyCPU
+		{FC15859F-3E6B-46EE-BC70-8DC4A17A1113}.Release|Any CPU.ActiveCfg = Release|AnyCPU
+		{FC15859F-3E6B-46EE-BC70-8DC4A17A1113}.Release|Any CPU.Build.0 = Release|AnyCPU
+		{56196DF6-446A-4364-936E-08CC812154D1}.Debug|Any CPU.ActiveCfg = Debug|AnyCPU
+		{56196DF6-446A-4364-936E-08CC812154D1}.Debug|Any CPU.Build.0 = Debug|AnyCPU
+		{56196DF6-446A-4364-936E-08CC812154D1}.Release|Any CPU.ActiveCfg = Release|AnyCPU
+		{56196DF6-446A-4364-936E-08CC812154D1}.Release|Any CPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="LaboratorioCrud.Web.SiteMaster" %>
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Laboratorio de Herramientas de Programación Aplicada III" />
+    <meta name="description" content="Gestión de usuarios con ASP.NET Web Forms y MySQL" />
+    <title>Directorio de usuarios</title>
+    <link rel="icon" type="image/svg+xml" href="~/Content/favicon.svg" runat="server" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/site.css?v=20261123-2" runat="server" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+<form id="formPrincipal" runat="server">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <aside class="sidebar" id="menuPrincipal" aria-label="Navegación principal">
+        <a class="brand" href="<%= ResolveUrl("~/Pages/Index.aspx") %>"><span class="brand-mark">u</span><span>directorio<span class="brand-dot">.</span></span></a>
+        <span class="nav-caption">ESPACIO DE TRABAJO</span>
+        <nav>
+            <a class="nav-item active" href="<%= ResolveUrl("~/Pages/Index.aspx") %>"><svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 9h18M9 9v11" /></svg> Usuarios</a>
+            <a class="nav-item" href="<%= ResolveUrl("~/Pages/Crud.aspx?accion=crear") %>"><span aria-hidden="true">+</span> Nuevo usuario</a>
+        </nav>
+        <div class="sidebar-foot"><span class="connection-dot"></span> Laboratorio ASP.NET<br /><small>Web Forms · MySQL</small></div>
+    </aside>
+    <div class="workspace">
+        <header class="topbar">
+            <button type="button" class="menu-toggle" id="menuToggle" aria-controls="menuPrincipal" aria-expanded="false">Menú</button>
+            <span class="topbar-label">Gestión de usuarios</span>
+            <span class="environment">ENTORNO ACADÉMICO</span>
+            <span class="avatar" aria-label="Laboratorio">UT</span>
+        </header>
+        <main id="contenido" class="main-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </main>
+        <footer class="page-footer"><span>Herramientas de Programación Aplicada III</span><span>UTP · 2026</span></footer>
+    </div>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="<%= ResolveUrl("~/Scripts/site.js") %>"></script>
+</body>
+</html>
